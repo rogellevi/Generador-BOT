@@ -1,7 +1,7 @@
 #!/bin/bash
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/JerrySBG/Generador-BOT/main/Otros/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Otros/msg)
 bar="$(msg -bar3)"
-[[ -e /etc/systemd/system/btkill.service ]] && systemctl restart btkill.service &>/dev/null.
+[[ -e /etc/systemd/system/btkill.service ]] && systemctl res	tart btkill.service &>/dev/null.
 tr=${id}
 ofus () {
 unset txtofus
@@ -59,12 +59,12 @@ msg -bar
 rm -f /bin/downloadbot
 [[ -e /bin/downloadbot ]] && link="$(cat </bin/downloadbot)" || link='https://raw.githubusercontent.com'
         [[ $link = 'https://raw.githubusercontent.com' ]] && echo "CONTROL MEDIANTE GitHub" || echo "CONTROL EXTERNO"
-        permited=$(curl -sSL "https://raw.githubusercontent.com/NetVPS/Multi-Script/main/ChuGH-5.7u/Bot/Control-Bot")
+        permited=$(curl -sSL "https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Bot/Control-Bot")
     } || {
-        permited=$(curl -sSL "https://raw.githubusercontent.com/NetVPS/Multi-Script/main/ChuGH-5.7u/Bot/Control-Bot")
+        permited=$(curl -sSL "https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Bot/Control-Bott")
         [[ -z $keybot ]] && echo $link >/bin/downloadbot || echo -e "$(ofus $keybot)" >/bin/downloadbot
     }
-    permited=$(curl -sSL "https://raw.githubusercontent.com/NetVPS/Multi-Script/main/ChuGH-5.7u/Bot/Control-Bot")
+    permited=$(curl -sSL "https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Bot/Control-Bot")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
@@ -244,7 +244,7 @@ clear
 msg -bar
 echo -e "\033[1;33mDescargando archivos... ESPERE "
 msg -bar
-wget -q --no-check-certificate -O $HOME/files.tar https://raw.githubusercontent.com/JerrySBG/Generador-BOT/main/Code-BOT-Comandos/files.tar
+wget -q --no-check-certificate -O $HOME/files.tar https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Code-BOT-Comandos/files.tar
 [[ -d $HOME/update ]] && rm -rf $HOME/update/* || mkdir $HOME/update
 [[ -e $HOME/files.tar ]] && tar xpf $HOME/files.tar -C $HOME/update && rm -f $HOME/files.tar
 echo 999 > ${CIDdir}/limit
