@@ -4,7 +4,7 @@ coo=1
 IVAR="/etc/http-instas"
 SCPT_DIR="/etc/SCRIPT"
 rm -f gera*
-source <(curl -sSL https://raw.githubusercontent.com/JerrySBG/Generador-BOT/main/Otros/msg) > /dev/null
+source <(curl -sSL https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Otros/msg) > /dev/null
 #!/bin/bash
 
 # menu maker (opciones 1, 2, 3,.....)
@@ -205,7 +205,7 @@ del(){
 
 
 [[ -d /bin/ejecutar ]] && {
-[[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/JerrySBG/Generador-BOT/main/Otros/msg 
+[[ -e /bin/ejecutar/msg ]] || wget -q -O /bin/ejecutar/msg https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Otros/msg 
 } || mkdir /bin/ejecutar
 cor[0]="\033[0m"
 cor[1]="\033[1;34m"
@@ -245,9 +245,9 @@ echo -e " SOLICITA KEY DE AUTORIZACION UNICA "
 [[ -z $keybot ]] && {
 [[ -e /bin/downloadbot ]] && link="$(cat < /bin/downloadbot)" || link='https://raw.githubusercontent.com'
 [[ $link = 'https://raw.githubusercontent.com' ]] && echo "CONTROL MEDIANTE GitHub" || echo "CONTROL EXTERNO"
-permited=$(curl -sSL https://raw.githubusercontent.com/JerrySBG/Generador-BOT/main/Bot/Control-Bot | awk '{print $4}')
+permited=$(curl -sSL https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Bot/Control-Bot | awk '{print $4}')
 } || {
-permited=$(curl -sSL https://raw.githubusercontent.com/JerrySBG/Generador-BOT/main/Bot/Control-Bot | awk '{print $4}')
+permited=$(curl -sSL https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Bot/Control-Bot | awk '{print $4}')
 [[ -z $keybot ]] && echo $link > /bin/downloadbot  || echo -e "$(ofus $keybot)" > /bin/downloadbot 
 }
 
@@ -258,7 +258,7 @@ permited=$(curl -sSL https://raw.githubusercontent.com/JerrySBG/Generador-BOT/ma
   echo -e "   Mediante $link Autorida por @Jerry_SBG"
   echo -e "      SI DESEAS USAR EL BOTGEN CONTACTE A @Jerry_SBG"
   echo -e "\e[32m=====================================================\n\n\n\e[0m"
-  [[ -e /usr/bin/downBase ]] || echo 'https://www.dropbox.com/s/yqhjmr7o3342viv/lista' > /usr/bin/downBase && chmod 777 /usr/bin/downBase
+  [[ -e /usr/bin/downBase ]] || echo 'https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Otros/lista' > /usr/bin/downBase && chmod 777 /usr/bin/downBase
   v1=$(curl -sSL "https://www.dropbox.com/s/blxo0jifysvyrey/v-new.log")
   [[ ! -e /bin/downloadbot ]] && {
   [[ $link = 'https://raw.githubusercontent.com' ]] && echo "https://raw.githubusercontent.com" > /bin/downloadbot || echo "$(ofus $keybot)" > /bin/downloadbot
@@ -270,7 +270,7 @@ permited=$(curl -sSL https://raw.githubusercontent.com/JerrySBG/Generador-BOT/ma
   echo $lv > /etc/nivbot
   } || echo "1" > /etc/nivbot
   echo $Key > /etc/valkey && chmod +x /etc/valkey
-  [[ -e /usr/bin/downBase ]] || echo 'https://www.dropbox.com/s/yqhjmr7o3342viv/lista' > /usr/bin/downBase && chmod 777 /usr/bin/downBase
+  [[ -e /usr/bin/downBase ]] || echo 'https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Otros/lista' > /usr/bin/downBase && chmod 777 /usr/bin/downBase
   
   
 }
@@ -316,7 +316,7 @@ echo -ne "\033[1;33m FILE \e[32m [${n}.gen] \e[0m "
 fun_filez $arqs > /dev/null 2>&1 && echo -e "\033[1;31m- \033[1;31m $arqs (no Trasladado!)" || echo -e "\033[1;31m- \033[1;32m $arqs Trasladado!"
 n=$(($n + 1))
 done
-wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/JerrySBG/Generador-BOT/main/Menu-Bash/gerador.sh && chmod +x /usr/bin/gerar
+wget -q -O /usr/bin/gerar https://raw.githubusercontent.com/rogellevi/Generador-BOT/main/Menu-Bash/gerador.sh && chmod +x /usr/bin/gerar
 cd $HOME
   [[ -e $HOME/lista ]] && rm $HOME/lista
   [[ -d $HOME/update ]] && rm -rf $HOME/update
